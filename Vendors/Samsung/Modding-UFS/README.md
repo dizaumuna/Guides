@@ -32,7 +32,7 @@
 
 ## Preparing
 
-Before you can beginn modding your UFS, You need to prepare some Things first. <br>
+Before you can begin modding your UFS, You need to prepare some Things first. <br>
 You will need the TWRP Recovery for your Device and [Mass Storage](../../../SoCs/Snapdragon/Mass-Storage/README.md) for your Device. <br>
 Follow the Mass Storage Guide and come back here once you got it Running.
 
@@ -54,7 +54,7 @@ Right Click the Disk and Press `Online`.
 ![Preview](Pictures/Preview-1.png)
 ![Preview](Pictures/Preview-2.png)
 
-Now Windows set it to Online and it should now be one Large Unformated Partition. <br>
+Now Windows set it to Online and it should now be one Large Unformatted Partition. <br>
 Whatever you do, ***Don't* Reboot your Device!** <br>
 You need to Repair it now, Enter ADB Shell using this Command:
 ```cmd

@@ -58,7 +58,7 @@ After that you can now Connect your Device to your PC.
 
 ## Running Mass Storage
 
-Once you Downloaded the Script and Connected your Device, Psuh the Script to your Device:
+Once you Downloaded the Script and Connected your Device, Push the Script to your Device:
 ```cmd
 adb push MassStorage.sh /cache/
 ```

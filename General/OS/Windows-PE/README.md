@@ -51,7 +51,7 @@ Download Windows PE and extract the zip File somewhere, where you can reach it.
 We will now format the cust Partition to FAT32:
 ```
 # NOTE: Not all Devices have a cust Partition
-#       Some OnePlus Devices also have a cust Partition but under a diffrent Name
+#       Some OnePlus Devices also have a cust Partition but under a different Name
 #       The Name is as we know this: oem_cust1_a/b
 mkfs.fat -F32 -s1 /dev/block/by-name/cust
 ```
@@ -141,4 +141,4 @@ mount /dev/block/by-name/pe /mnt/pe
 exit
 adb push <Path to WinPE Files> /mnt/pe/
 ```
-Reboot into UEFI and thats it! You successfully installed Windows PE!
+Reboot into UEFI and that's it! You successfully installed Windows PE!

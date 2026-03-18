@@ -38,7 +38,7 @@ You can either use built-in UFS storage, SD Card or external USB device.
 
 ***⚠️ In this Section of the Guide you can easily brick your Device! ⚠️***
 
-Boot into your Custom Recovery and unmount `userdata`, then open Command Promt on your PC / Laptop and enter ADB Shell. <br />
+Boot into your Custom Recovery and unmount `userdata`, then open Command Prompt on your PC / Laptop and enter ADB Shell. <br />
 Once in ADB Shell create a directory called `worksapce` in `/`:
 ```
 mkdir /workspace/
@@ -153,7 +153,7 @@ Okay so now you have a system, now you need a bootloader I'm going to use refind
 
 Unpack `refind-bin-x.xx.x.x.zip` into `refind/` directory.
 
-Copy over this files/folders from `refind/refind/` folder into the `tmp/boot/EFI/boot/` folder (if it dosen't exist create it)
+Copy over this files/folders from `refind/refind/` folder into the `tmp/boot/EFI/boot/` folder (if it doesn't exist create it)
 ```
 drivers_aa64/
 icons/

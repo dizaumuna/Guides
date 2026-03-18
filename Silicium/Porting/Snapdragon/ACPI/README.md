@@ -41,8 +41,8 @@ To Create Minimal ACPI you need these following Things:
 
 For a Snapdragon Device To Boot Windows are only 4 ACPI Tables needed: APIC, FACP, GTDT and DSDT.
 
-APIC (Multiple APIC Description Table) in a Descriptor ACPI Table wich Describes the CPU and Interrupt Controller (GIC). <br />
-FACP (Fixed ACPI Description Table) is used to define Varios Static and Configuration Details about the System. <br />
+APIC (Multiple APIC Description Table) in a Descriptor ACPI Table which Describes the CPU and Interrupt Controller (GIC). <br />
+FACP (Fixed ACPI Description Table) is used to define Various Static and Configuration Details about the System. <br />
 GTDT (Generic Timer Description Table) stores the Generic Timer Infos about the System. <br />
 DSDT (Differentiated System Description Table) stores all Device Specific Values of Devices like UFS for Windows Drivers to pick up. <br />
 See it as the UEFI DTB Version for Example.
@@ -51,7 +51,7 @@ See it as the UEFI DTB Version for Example.
 
 ## Creating APIC.dsl (Step 1.1)
 
-Lets Beginn with APIC ACPI Table first. <br />
+Lets Begin with APIC ACPI Table first. <br />
 Create a File called `APIC.dsl` in `Silicon/Qualcomm/<SoC Codename>Pkg/AcpiTables/`. <br />
 That File should Contain this:
 ```
@@ -278,7 +278,7 @@ cpu-pmu {
 };
 ```
 `GIC_PPI` (0x01) is `0x10`. <br />
-So its like this: `0x07 + 0x10`, Thats your Interrupt in ACPI.
+So its like this: `0x07 + 0x10`, That's your Interrupt in ACPI.
 
 `<interrupt controller Interrupt>` is the Interrupt Value of the `interrupt-controller` Node in the DTB. <br />
 More Infos How to get the Interrupt:
@@ -300,7 +300,7 @@ interrupt-controller@17100000 {
 };
 ```
 `GIC_PPI` (0x01) is `0x10`. <br />
-So its like this: `0x09 + 0x10`, Thats your Interrupt in ACPI.
+So its like this: `0x09 + 0x10`, That's your Interrupt in ACPI.
 
 `<CPU ID>` is the ID of the current CPU, These Values are in the `cpus` Node. <br />
 Example:
@@ -416,7 +416,7 @@ interrupt-controller@17100000 {
 
 ## Creating APIC.UniCore.dsl (Step 1.2)
 
-This File is APIC but just with One Core Enabled, Its in some Cases usefull if Windows won't boot with 8 Cores. <br />
+This File is APIC but just with One Core Enabled, Its in some Cases useful if Windows won't boot with 8 Cores. <br />
 The Only thing that needs to be done here is Changing every:
 ```
 [224h 0548 004h]       Flags (decoded below) : 00000001

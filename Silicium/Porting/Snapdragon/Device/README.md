@@ -451,7 +451,7 @@ INF QcomPkg/Drivers/SimpleFbDxe/SimpleFbDxe.inf
 `ArmPsciMpServicesDxe` should be under `TimerDxe`. <br />
 `DynamicRAMDxe` should be under `SmemDxe`. <br />
 `ClockSpeedUpDxe` should be under `ClockDxe`. <br />
-`SimpleFbDxe` dosen't Replace `DisplayDxe` Make an If case for it, Check other Devices for the if case.
+`SimpleFbDxe` doesn't Replace `DisplayDxe` Make an If case for it, Check other Devices for the if case.
 
 Also make sure that you don't add `FvSimpleFileSystemDxe`.
 
@@ -482,7 +482,7 @@ INF MdeModulePkg/Bus/Usb/UsbMouseAbsolutePointerDxe/UsbMouseAbsolutePointerDxe.i
 `Pcd` should be under `DxeMain`. <br />
 `DynamicRAMDxe` should be under `SmemDxe`. <br />
 `ClockSpeedUpDxe` should be under `ClockDxe`. <br />
-`SimpleFbDxe` dosen't Replace `DisplayDxe` Make an If case for it, Check other Devices for the if case. <br />
+`SimpleFbDxe` doesn't Replace `DisplayDxe` Make an If case for it, Check other Devices for the if case. <br />
 `UsbMouseAbsolutePointerDxe` should be under `UsbKbDxe`. <br />
 
 Remove any EFI Applications from XBL in `DXE.inc`. <br />
@@ -493,14 +493,14 @@ Check other Devices DXE.inc File to get an Idea, What to replace with the Mu Dri
 ## Creating RAW.inc (Step 3.2.4)
 
 You can take the RAW Files Order from DXE.inc that UEFIReader generated. <br />
-Thats how they should look:
+That's how they should look:
 ```
 FILE FREEFORM = <GUID> {
   SECTION RAW = Binaries/<Device Codename>/RawFiles/<File Name>.<File Extension>
   SECTION UI = "<Name>"
 }
 ```
-Just UEFIReader dosen't format the Lines correct, You need to Correct that. <br />
+Just UEFIReader doesn't format the Lines correct, You need to Correct that. <br />
 Also Remove any RAW Section that has a Picture.
 
 ## Creating DeviceConfigurationMap Library (Step 3.3)

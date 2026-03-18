@@ -45,7 +45,7 @@ Mu-Silicium/Silicon/Qualcomm/<SoC Codename>Pkg/
 ## Creating SoC Folder (Step 1.1)
 
 In `./Silicon/Qualcomm/` are all SoC Folders located. <br />
-Copy any SoC Folder of your Chosse and Rename it to `<SoC Codename>Pkg`. <br />
+Copy any SoC Folder of your Choose and Rename it to `<SoC Codename>Pkg`. <br />
 NOTE: You might want to copy a SoC Folder that is similar to yours.
 
 ## Modify .dsc.inc File (Step 1.2)
@@ -371,11 +371,11 @@ CHAR8 *mCacheInfoType7_L3CStrings[] = {
 };
 ```
 You can get these Cache Sizes from a App in the Play Store called `CPU Info (open-source)`. <br />
-If Your SoC dosen't have L3 for example then just remove it. <br />
+If Your SoC doesn't have L3 for example then just remove it. <br />
 
 After that We move to `SMBIOS_TABLE_TYPE17`. <br />
 There you just need to change one Value: `Speed`, That should be in the Specs of your SoC. <br />
-Then Moddify The Data Updates for `TYPE4`, `TYPE7` and `TYPE17` according to what you changed before in `SmBiosTableDxe.c`.
+Then Modify The Data Updates for `TYPE4`, `TYPE7` and `TYPE17` according to what you changed before in `SmBiosTableDxe.c`.
 
 ## Modify Librarys (Step 1.4)
 

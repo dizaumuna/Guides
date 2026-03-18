@@ -53,9 +53,9 @@ TODO: Add this Section if any Drivers are created for a Device
 
 ## Partition UFS (Step 2)
 
-***⚠️ In this Section of the Guide you can easly brick your Device! ⚠️***
+***⚠️ In this Section of the Guide you can easily brick your Device! ⚠️***
 
-Boot into your Custom Recovery and unmount `userdata`, then open Command Promt on your PC / Laptop and enter ADB Shell. <br />
+Boot into your Custom Recovery and unmount `userdata`, then open Command Prompt on your PC / Laptop and enter ADB Shell. <br />
 Once in ADB Shell create a directory called `worksapce` in `/`:
 ```
 mkdir /workspace/
@@ -64,7 +64,7 @@ Then extract the .7z Files and push the content with `adb push` into the workspa
 ```
 adb push parted gdisk /workspace/
 ```
-After you copied parted and gdisk to workspace make it executeable and run parted:
+After you copied parted and gdisk to workspace make it executable and run parted:
 ```
 # NOTE: If your device has memory type eMMC, instead of sda use mmcblk0!
 chmod 744 parted gdisk
@@ -109,7 +109,7 @@ mke2fs -t ext4 /dev/block/by-name/userdata        # Userdata
 mkfs.fat -F32 -s1 /dev/block/by-name/esp          # ESP
 mkfs.ntfs -f /dev/block/by-name/win               # Windows
 ```
-If formating userdata gives a error reboot to recovery and format userdata in the Custom Recovery GUI. <br />
+If formatting userdata gives a error reboot to recovery and format userdata in the Custom Recovery GUI. <br />
 
 ***⚠️ End of the Dangerous Section! ⚠️***
 
@@ -120,18 +120,18 @@ If Not Use [Mass-Storage.zip](https://github.com/Robotix22/Mu-Qcom-Guides/files/
 After that boot the UEFI Image then it enters Windows Boot Manager select `Developer Menu` -> `USB Mass Storage Mode`. <br />
 
 Then connect your Device to the PC / Laptop and find the Windows and esp partition. <br />
-Open diskpart in Command Promt and Find all needed Partitions:
+Open diskpart in Command Prompt and Find all needed Partitions:
 ```
 # NOTE: Most likely, your system itself will assign a letter to the win partition.
 DISKPART> lis dis
-# you can findout the Device ID by looking at the Sizes you may regonize your Device Internal Storage Size.
+# you can find out the Device ID by looking at the Sizes you may regonize your Device Internal Storage Size.
 DISKPART> sel dis <Device ID>
 DISKPART> lis par
 DISKPART> sel par <Number + 1>
-# Use a other Letter if "X" is not availbe.
+# Use a other Letter if "X" is not available.
 DISKPART> assign letter X
 DISKPART> sel par <Number + 2>
-# Use a other Letter if "R" is not availbe.
+# Use a other Letter if "R" is not available.
 DISKPART> assign letter R
 DISKPART> exit
 ```
@@ -155,7 +155,7 @@ TODO: Add this Sections if there are any Drivers for a Device.
 cd into the EFI Partition of your Device and edit some BCD Values:
 ```
 # Start CMD as Admin if you can't access The ESP Partition.
-# X: Is what we assinged in the diskpart part, replace the letter if you used another letter.
+# X: Is what we assigned in the diskpart part, replace the letter if you used another letter.
 cd X:\EFI\Microsoft\Boot
 bcdedit /store BCD /set "{default}" testsigning on
 bcdedit /store BCD /set "{default}" nointegritychecks on
