@@ -54,7 +54,7 @@ Right Click the Disk and Press `Online`.
 ![Preview](Pictures/Preview-1.png)
 ![Preview](Pictures/Preview-2.png)
 
-Now Windows set it to Online and it should now be one Large Unformatted Partition. <br>
+Now in Windows set it to Online and it should now be one Large Unformatted Partition. <br>
 Whatever you do, ***Don't* Reboot your Device!** <br>
 You need to Repair it now, Enter ADB Shell using this Command:
 ```cmd
