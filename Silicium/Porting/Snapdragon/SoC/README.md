@@ -45,7 +45,7 @@ Mu-Silicium/Silicon/Qualcomm/<SoC Codename>Pkg/
 ## Creating SoC Folder (Step 1.1)
 
 In `./Silicon/Qualcomm/` are all SoC Folders located. <br />
-Copy any SoC Folder of your Choose and Rename it to `<SoC Codename>Pkg`. <br />
+Copy any SoC Folder of your Choice and Rename it to `<SoC Codename>Pkg`. <br />
 NOTE: You might want to copy a SoC Folder that is similar to yours.
 
 ## Modify .dsc.inc File (Step 1.2)
